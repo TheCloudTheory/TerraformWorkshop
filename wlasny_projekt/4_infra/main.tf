@@ -24,9 +24,9 @@ resource "azurerm_storage_container" "sc" {
 resource "azurerm_storage_blob" "sb_plain_text" {
   for_each = local.plain_text_files
 
-  name                   = each.value.name
+  name                   = "${each.value.name}.${each.value.file_extension}"
   storage_account_name   = azurerm_storage_account.sa.name
-  storage_container_name = "public"
+  storage_container_name = var.data_containers[index(var.data_containers.*.access_type, "blob")].name
   type                   = "Block"
   source_content         = each.value.content
 }
@@ -34,9 +34,9 @@ resource "azurerm_storage_blob" "sb_plain_text" {
 resource "azurerm_storage_blob" "sb_private" {
   for_each = local.secure_files
 
-  name                   = each.value.name
+  name                   = "${each.value.name}.${each.value.file_extension}"
   storage_account_name   = azurerm_storage_account.sa.name
-  storage_container_name = "private"
+  storage_container_name = var.data_containers[index(var.data_containers.*.access_type, "private")].name
   type                   = "Block"
   source_content         = each.value.content
 }
