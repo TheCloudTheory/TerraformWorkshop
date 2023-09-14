@@ -1,0 +1,54 @@
+{
+    "mode": "managed",
+    "type": "azurerm_container_registry",
+    "name": "acr",
+    "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+    "instances": [
+      {
+        "schema_version": 2,
+        "attributes": {
+          "admin_enabled": false,
+          "admin_password": "",
+          "admin_username": "",
+          "anonymous_pull_enabled": false,
+          "data_endpoint_enabled": false,
+          "encryption": [
+            {
+              "enabled": false,
+              "identity_client_id": "",
+              "key_vault_key_id": ""
+            }
+          ],
+          "export_policy_enabled": true,
+          "georeplications": [],
+          "id": "/subscriptions/f81e70a7-e819-49b2-a980-8e9c433743dd/resourceGroups/rg-kamz-tf2/providers/Microsoft.ContainerRegistry/registries/acrkamztf",
+          "identity": [],
+          "location": "westeurope",
+          "login_server": "acrkamztf.azurecr.io",
+          "name": "acrkamztf",
+          "network_rule_bypass_option": "AzureServices",
+          "network_rule_set": [],
+          "public_network_access_enabled": true,
+          "quarantine_policy_enabled": false,
+          "resource_group_name": "rg-kamz-tf2",
+          "retention_policy": [
+            {
+              "days": 7,
+              "enabled": false
+            }
+          ],
+          "sku": "Basic",
+          "tags": {},
+          "timeouts": null,
+          "trust_policy": [
+            {
+              "enabled": false
+            }
+          ],
+          "zone_redundancy_enabled": false
+        },
+        "sensitive_attributes": [],
+        "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIyIn0="
+      }
+    ]
+  }
